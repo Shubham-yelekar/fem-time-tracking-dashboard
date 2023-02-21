@@ -115,6 +115,13 @@
     
   /* utilities */
 
+  body {
+    
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+  }
+
   .container {
     width: 100%;
     display: flex;
@@ -129,6 +136,7 @@
   }
 
   .card-avatar {
+    
     border-radius: 1.6rem;
     display: flex;
     flex-direction: column;
@@ -166,9 +174,6 @@
     color: var(--clr-neutral-pale-blue);
   }
 
-
-  
-
   .card-avatar-bot {
     display: flex;
     flex-direction: row;
@@ -185,12 +190,163 @@
     color: var(--clr-neutral-pale-blue);
     cursor: pointer;
     flex: 1 1 100%;
+    transition: all 0.3s ease ;
   }
   
   .btn:where(.active , :hover) {
     color: white;
+    font-weight: 500;
+  }
+
+  .timecard { 
+    border-radius: 2rem ;
+    
+  }
+
+  .container-timecards {
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 3rem, 2rem);
+    justify-content: center;
+    
+  }
+
+  .timecard-bg {
+    position: relative;
+    padding-top: 7rem;
+    overflow: hidden;
+    
+  }
+
+  .card-icon {
+    position: absolute;
+    top: -0.5rem;
+    right: 1rem;
   }
 
 
+  .timecard-top {
+    position: relative;
+    background-color: var(--clr-neutral-dark-blue);
+    padding: 1.8rem 2rem;
+    border-radius: 1.6rem;
+    
+  }
+
+  .timecard-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .timecard-title h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  .timecard-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .current {
+    font-size: 4.2rem;
+    font-weight: 300;
+  }
+
+  .previous {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--clr-neutral-pale-blue);
+  }
+
+  .dot-btn {
+    color: var(--clr-neutral-pale-blue);
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+
+  .dot-btn:hover {
+    color: var(--clr-prime-voilet-social);
+  }
 
 
+  .timecard-work {
+    background-color: var(--clr-prime-light-red-work);
+  }
+
+  .timecard-play {
+    background-color: var(--clr-prime-soft-blue-play);
+  }
+
+  .timecard-study {
+    background-color: var(--clr-prime-light-red-study);
+  }
+
+  .timecard-exercise {
+    background-color: var(--clr-prime-lime-green-exercise);
+  }
+
+  .timecard-social {
+    background-color: var(--clr-prime-voilet-social);
+  }
+
+  .timecard-self {
+    background-color: var(--clr-prime-soft-orange);
+  }
+
+
+@media screen and (min-width:1156px) {
+  .container {
+    flex-direction: row;
+    max-width: 1024px;
+  }
+
+  .card-avatar {
+    width: 256px;
+    height: 520px;
+  }
+
+  .container-timecards {
+    width: 768px;
+    height: 520px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .timecard-bg {
+    height: 256px;
+    width: 256px;
+    padding-top: 5rem;
+  }
+
+  .timecard-top {
+    height: 100%;
+    padding: 3rem 3rem;
+  }
+
+  .timecard-time {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .current {
+    font-size: 5.6rem;
+  }
+
+  .top-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .bot-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
